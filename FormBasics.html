@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form tag</title>
+</head>
+<body>
+  <h3>1. Basic Form Structure</h3>
+  <form action="/submit-form" method="POST">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+    <button type="submit">Submit</button>
+  </form>
+  <hr>
+  
+  <h3>2. Input Fields – Text, Password, and Email</h3>
+  <label for="username">Username:</label>
+<input type="text" id="username" name="username" required>
+<label for="password">Password:</label>
+<input type="password" id="password" name="password" required>
+<label for="email">Email:</label>
+<input type="email" id="email" name="email" required>
+<hr>
+
+<h3>3. Checkbox and Radio Buttons</h3>
+<label for="subscribe">Subscribe to newsletter:</label>
+<input type="checkbox" id="subscribe" name="subscribe">
+<label>Choose your favorite color:</label>
+<input type="radio" id="red" name="color" value="red">
+<label for="red">Red</label>
+<input type="radio" id="blue" name="color" value="blue">
+<label for="blue">Blue</label>
+<hr>
+
+<h3>4. Select Dropdown</h3>
+<label for="city">Select your city:</label>
+<select id="city" name="city">
+  <option value="nyc">New York</option>
+  <option value="la">Los Angeles</option>
+  <option value="sf">San Francisco</option>
+</select>
+<hr>
+
+<h3>5. Textarea (Multi-line Text Input)</h3>
+<label for="comments">Comments:</label>
+<textarea id="comments" name="comments" rows="4" cols="50"></textarea>
+<hr>
+
+<h3>6. File Upload</h3>
+<label for="file">Upload your resume:</label>
+<input type="file" id="file" name="resume">
+<hr>
+
+<h3>7. Button Types (Submit, Reset, and Custom)</h3>
+<button type="submit">Submit</button>
+<button type="reset" onclick="alert('do it do it')">Reset</button>
+<button type="button" onclick="alert('Hello!')">Click Me</button>
+<hr>
+
+<h3>8. Grouping Form Elements (Fieldset & Legend)</h3>
+<fieldset>
+  <legend>Personal Information</legend>
+  <label for="first-name">First Name:</label>
+  <input type="text" id="first-name" name="first-name">
+  <label for="last-name">Last Name:</label>
+  <input type="text" id="last-name" name="last-name">
+</fieldset>
+<hr>
+
+<h3>9. Form Validation (Required, Pattern, Min/Max)</h3>
+<label for="username">Username:</label>
+<input type="text" id="username" name="username" required>
+<label for="phone">Phone Number:</label>
+<input type="text" id="phone" name="phone" pattern="\d{3}[-]\d{3}[-]\d{4}" required>
+<label for="age">Age:</label>
+<input type="number" id="age" name="age" min="18" max="100" required>
+<hr>
+
+<h3>10. Form Action and Method</h3>
+<form action="submit_form.php" method="POST">
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" required>
+  <button type="submit">Submit</button>
+</form>
+<hr>
+
+<h3>11. Multiple Forms on One Page</h3>
+<form action="login.php" method="POST">
+  <label for="login-email">Email:</label>
+  <input type="email" id="login-email" name="email" required>
+  <button type="submit">Login</button>
+</form>
+<hr>
+
+<form action="register.php" method="POST">
+  <label for="register-email">Email:</label>
+  <input type="email" id="register-email" name="email" required>
+  <button type="submit">Register</button>
+</form>
+<hr>
+
+<h3>12. Hidden Input Fields</h3>
+<input type="hidden" name="user_id" value="12345">
+<hr>
+
+<h3>13. Styling Forms</h3>
+<style>
+  input[type="text"], input[type="email"], input[type="password"] {
+    padding: 10px;
+    margin: 5px;
+    width: 100%;
+    border: 1px solid #ccc;
+  }
+  button {
+    padding: 10px 20px;
+    background-color: #4caf98;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: #4caf98;
+  }
+</style>
+
+</body>
+</html>

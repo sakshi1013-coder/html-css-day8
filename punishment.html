@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f7fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.form-container {
+  background-color: white;
+  padding: 20px 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 350px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.gender-options {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+input[type="radio"] {
+  margin-right: 5px;
+}
+
+input[type="checkbox"] {
+  margin-right: 5px;
+  margin-top: 15px;
+}
+
+textarea {
+  height: 80px;
+  resize: vertical;
+}
+
+button {
+  margin-top: 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+</style>
+<body>
+  <section>
+  <form action="/submit-form" method="POST">
+    <label for="name"> Full Name:</label><br>
+    <input placeholder="sakshi" type="text" id="name" name="name" required><br>
+    <label for="email">Email:</label><br>
+<input placeholder="you@example.com"  type="email" id="email" name="email" required><br>
+  <label placeholder="123-456-7890" for="phone">Phone Number:</label><br>
+<input  placeholder="123-456-7890" type="text" id="phone" name="phone" pattern="\d{3}[-]\d{3}[-]\d{4}" required>
+
+<fieldset>
+  <legend><strong>Gender:</strong></legend>
+  <input type="radio" id="male" name="gender" value="Male">
+  <label for="male">Male</label><br>
+  <input type="radio" id="female" name="gender" value="Female">
+  <label for="female">Female</label><br>
+  <input type="radio" id="other" name="gender" value="other">
+  <label for="other">Other</label><br>
+</fieldset>
+
+<label for="city">City:</label><br>
+<select id="city" name="city">
+  <option value="nyc">New York</option>
+  <option value="la">Los Angeles</option>
+  <option value="sf">San Francisco</option>
+</select><br>
+
+<label>Subscribe to our newsletter:</label>
+<input type="checkbox" ></label><br>
+
+<label for="message">Message:</label><br>
+<textarea placeholder="Write your message here..." id="message" name="message" required></textarea><br>
+
+<button type="submit">Submit</button>
+
+</form>
+</section>
+</body>
+</html>
